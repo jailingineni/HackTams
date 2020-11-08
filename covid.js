@@ -13,11 +13,13 @@ class CovidInfo{
                       new CovidInfo('Brazoria', 755, 188, 15588622, 374264),
                       new CovidInfo('Collin', 1445, 199, 599117532, 1034730),
                       new CovidInfo('Dallas',	10476, 1318, 241375801, 2635516),
+                      new CovidInfo('Denton',	974, 181, 28354188, 887207),
                       new CovidInfo('Harris', 27545, 2865, 361353488, 4713325),
                       new CovidInfo('Hudspeth', 34, 3, 149878, 4886),
                       new CovidInfo('King', 0, 0, 208452, 272),
                       new CovidInfo('Willacy', 56, 58, 870911, 21358),
                       new CovidInfo('Zavala', 12, 19, 945577, 11840)];
+                      
 function sortArray(sortorder){
     switch(sortorder){
         case 'Active Case':
