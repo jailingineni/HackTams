@@ -18,6 +18,7 @@ function addListValues(){
         var name = city["name"];
         var count = city["count"]
         
+        console.log(`${l}`)
         var item = `<div class="item">
     <i class="large github middle aligned icon"></i>
                        <div class="content">
