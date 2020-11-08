@@ -1,21 +1,30 @@
-<link rel="stylesheet" type="text/css"
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 <link rel="stylesheet" type="text/css" href="rankingsbyPopulations.css">
+<script type="text/javascript" src = "covid.js"> </script>
 
+</head>
 <body>
+    <script> sortArray('Active Case')</script>
     <div id="centered-text" class="ui text container">
-        <h1> Rankings By Active Cases</h1>
+        <h1> Rankings By Active Covid Cases</h1>
+    <table border = 1 class = "center-table"> 
+            <script>for(var l = 0; l<covidinfos.length; l++){
+            document.write('<tr><td>'); 
+            document.write(l+1);
+            document.write('.</td> <td>');
+            document.write(covidinfos[l].counties);
+            document.write('</td> <td>');
+            document.write(covidinfos[l].activecases);
+            document.write('</td></tr>');
+            }</script>   
 
-<p> 1. Bexar 54,441 <p>
-<p> 2. Harris 27,545 <p>
-<p> 3. Dallas 10,476 <p>
-<p> 4. Collin 1,445 <p>
-<p> 5. Brazoria 755 <p>
-<p> 6. Willacy 56 <p>
-<p> 7. Hudspeth 34 <p>
-<p> 8. Zavala 12 <p>
-<p> 9. Austin 6 <p>
-<p> 10. King 0<p>
-    </div>
+</table>   
+
+</div>
 
 </body>
+
+</html>

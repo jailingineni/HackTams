@@ -1,22 +1,30 @@
-<link rel="stylesheet" type="text/css"
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 <link rel="stylesheet" type="text/css" href="rankingsbyPopulations.css">
+<script type="text/javascript" src = "covid.js"> </script>
 
+</head>
 <body>
-    <div id="centered-text"class="ui text container">
+    <script> sortArray('GDP')</script>
+    <div id="centered-text" class="ui text container">
         <h1> Rankings By GDP</h1>
+    <table border = 1 class = "center-table"> 
+            <script>for(var l = 0; l<covidinfos.length; l++){
+            document.write('<tr><td>'); 
+            document.write(l+1);
+            document.write('.</td> <td>');
+            document.write(covidinfos[l].counties);
+            document.write('</td> <td>');
+            document.write(covidinfos[l].GDP);
+            document.write('</td></tr>');
+            }</script>   
 
-<p> 1. Harris 361,353,488 <p>
-<p> 2. Dallas 241,375,80 <p>
-<p> 3. Bexar 97,527,759 <p>
-<p> 4. Collin 59,917,532 <p>
-<p> 5. Brazoria 15,588,622 <p>
-<p> 5. Austin 1,271,624 <p>
-<p> 6. Zavala 945,577 <p>
-<p> 7. Willacy 870,911 <p>
-<p> 8. King 208,452 <p>
-<p> 9. Hudspeth 149,878 <p>
+</table>   
 
-    </div>
+</div>
 
 </body>
+
+</html>
