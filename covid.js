@@ -37,3 +37,19 @@ function sortArray(sortorder){
         break;
     }
 }
+function updateCard(cityName){
+    var county=document.getElementById("cityName")
+    var cases=document.getElementById("activeCases")
+    var death=document.getElementById("deaths")
+    var GDPs=document.getElementById("GDP")
+    var pop=document.getElementById("population")
+    for(var i=0; i<covidinfos.length;i++){
+        if(cityName==covidinfos[i].counties){
+            county.innerHTML=covidinfos[i].counties
+            cases.innerHTML+=covidinfos[i].activecases
+            death.innerHTML+=covidinfos[i].deaths
+            GDPs.innerHTML+=covidinfos[i].GDP
+            pop.innerHTML+=covidinfos[i].population
+        }
+    }
+}
