@@ -38,6 +38,7 @@ function sortArray(sortorder){
     }
 }
 function updateCard(cityName){
+    document.getElementById("displays").style="display:block"
     var county=document.getElementById("cityName")
     var cases=document.getElementById("activeCases")
     var death=document.getElementById("deaths")
@@ -46,10 +47,10 @@ function updateCard(cityName){
     for(var i=0; i<covidinfos.length;i++){
         if(cityName==covidinfos[i].counties){
             county.innerHTML=covidinfos[i].counties
-            cases.innerHTML+=covidinfos[i].activecases
-            death.innerHTML+=covidinfos[i].deaths
-            GDPs.innerHTML+=covidinfos[i].GDP
-            pop.innerHTML+=covidinfos[i].population
+            cases.innerHTML="Active Cases: " + covidinfos[i].activecases
+            death.innerHTML= "Covid Deaths: " + covidinfos[i].deaths
+            GDPs.innerHTML="GDP: "+covidinfos[i].GDP
+            pop.innerHTML="Population: "+covidinfos[i].population
         }
     }
 }
