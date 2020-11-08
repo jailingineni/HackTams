@@ -1,23 +1,70 @@
-<link rel="stylesheet" type="text/css"
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 <link rel="stylesheet" type="text/css" href="rankingsbyPopulations.css">
-
+<!-- <script type="text/javascript" src = "C:/Users/Nathaniel/Documents/GitHub/HackTams/index.js"> </script> -->
+ <script>
+class CovidInfo{
+    constructor(counties, activecases, deaths, GDP, population){
+        this.counties = counties;
+        this.activecases = activecases;
+        this.deaths = deaths;
+        this.GDP = GDP;
+        this.population = population;
+    }
+    }
+    
+    var covidinfos = [new CovidInfo('Austin', 6, 10, 1271624, 30032), 
+                      new CovidInfo('Bexar', 54441, 1427, 97527759, 2003554),
+                      new CovidInfo('Brazoria', 755, 188, 15588622, 374264),
+                      new CovidInfo('Collin', 1445, 199, 599117532, 1034730),
+                      new CovidInfo('Dallas',	10476, 1318, 241375801, 2635516),
+                      new CovidInfo('Harris', 27545, 2865, 361353488, 4713325),
+                      new CovidInfo('Hudspeth', 34, 3, 149878, 4886),
+                      new CovidInfo('King', 0, 0, 208452, 272),
+                      new CovidInfo('Willacy', 56, 58, 870911, 21358),
+                      new CovidInfo('Zavala', 12, 19, 945577, 11840)];
+    function sortArray(sortorder){
+     switch(sortorder){
+        case 'Active Case':
+            covidinfos.sort((a, b)=> (a.activecases > b.activecases ? -1:1));
+            break;
+        case 'Deaths':
+            covidinfos.sort((a, b)=> (a.deaths > b.deaths ? -1:1));
+            break;
+        case 'GDP':
+            covidinfos.sort((a, b)=> (a.GDP > b.dGDP ? -1:1));
+            break;
+        case 'Population':
+            covidinfos.sort((a, b)=> (a.population > b.population ? -1:1));
+            break;
+        default: 
+        covidinfos.sort((a, b)=> (a.counties > b.counties ? -1:1));
+        break;
+    }
+}
+</script>
+</head>
 <body>
+    <script> sortArray('Population')</script>
     <div id="centered-text" class="ui text container">
         <h1> Rankings By Population</h1>
+    <table border = 1 class = "center-table"> 
+            <script>for(var l = 0; l<covidinfos.length; l++){
+            document.write('<tr><td>'); 
+            document.write(l+1);
+            document.write('.</td> <td>');
+            document.write(covidinfos[l].counties);
+            document.write('</td> <td>');
+            document.write(covidinfos[l].population);
+            document.write('</td></tr>');
+            }</script>   
 
-<p> 1. Harris 4,713,325 <p>
-<p> 2. Dallas 2,635,516 <p>
-<p> 3. Bexar 2,003,554 <p>
-<p> 4. Collin 1,034,730 <p>
-<p> 5. Brazoria 376,264 <p>
-<p> 6. Austin 30,032 <p>
-<p> 7. Willacy 21,358 <p>
-<p> 8. Zavala 11,840 <p>
-<p> 9. Hudspeth 4,886 <p>
-<p> 10.King 272<p>
-    </div>
+</table>   
+
+</div>
 
 </body>
 
-
+</html>
