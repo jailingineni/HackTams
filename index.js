@@ -1,36 +1,10 @@
 $('#dropdown').dropdown();
 
-var city1 = {
-    "name":"Dallas",
-    "count":10000
-}
 
-var allCities = [];
+var counties = [Austin, Bexar, Brazoria, Collin, Dallas, Harris, Hudspeth, King, Willacy, Zavala];
+var activecases = [6, 54441, 755, 1445, 10476, 27545, 33, 0, 56, 12];
+var deaths = [10, 1427, 188, 199, 1318, 2865, 3, 0, 58, 19];
+var GDP = [1271624, 97527759, 15588622, 599117532, 241375801, 361353488, 149878, 208452, 870911, 945577];
+var population = [30032, 2003554, 374264, 1034730, 2635516, 4713325, 4886, 272, 21538, 11840];
 
-allCities.push(city1);
-
-
-function addListValues(){
-
-    for(var l = 0; l< allCities.length; l++){
-
-        var city = allCities[l];
-        var name = city["name"];
-        var count = city["count"]
-        
-        console.log(`${l}`)
-        var item = `<div class="item">
-    <i class="large github middle aligned icon"></i>
-                       <div class="content">
-                           <a class="header">${name}</a>
-                           <div class="description">${count}</div>
-                       </div>
-                   </div>`
-    
-    
-        document.getElementById("list-container").insertAdjacentHTML('beforeend',item );
-    }
-
-    
-}
 
