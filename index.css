@@ -23,3 +23,15 @@
     align-self: baseline;
     justify-content: space-between;
 }
+
+.align-link{
+    display:flex;
+    justify-content: space-between;
+    width: 400px;
+    margin-left:auto;    
+    margin-right:auto;
+    position: absolute;
+    bottom: 75px;
+    left: 0px;
+    right: 0px;
+}
