@@ -19,6 +19,7 @@ class CovidInfo{
                       new CovidInfo('Hudspeth', 34, 3, 149878, 4886),
                       new CovidInfo('King', 0, 0, 208452, 272),
                       new CovidInfo('Liberty', 2322, 59, 1898796, 88219),
+                      new CovidInfo('Newton', 190, 14,508661, 13595),
                       new CovidInfo('Trinity', 211, 8, 233490, 14651),
                       new CovidInfo('Willacy', 56, 58, 870911, 21358),
                       new CovidInfo('Zavala', 12, 19, 945577, 11840)];
