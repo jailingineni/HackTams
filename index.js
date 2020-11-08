@@ -1,3 +1,5 @@
+$('#dropdown').dropdown();
+
 var city1 = {
     "name":"Dallas",
     "count":10000
