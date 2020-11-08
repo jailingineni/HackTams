@@ -14,6 +14,7 @@ class CovidInfo{
                       new CovidInfo('Collin', 1445, 199, 599117532, 1034730),
                       new CovidInfo('Dallas',	10476, 1318, 241375801, 2635516),
                       new CovidInfo('Denton',	974, 181, 28354188, 887207),
+                      new CovidInfo('El Paso',	24899, 683, 28974082, 839238),
                       new CovidInfo('Harris', 27545, 2865, 361353488, 4713325),
                       new CovidInfo('Hudspeth', 34, 3, 149878, 4886),
                       new CovidInfo('King', 0, 0, 208452, 272),
