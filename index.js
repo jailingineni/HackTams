@@ -41,3 +41,8 @@ function sortArray(sortorder){
     }
 }
 
+function handleCity(name){
+
+    //do work
+    alert(name)
+}
