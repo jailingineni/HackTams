@@ -49,8 +49,8 @@ function updateCard(cityName){
             county.innerHTML=covidinfos[i].counties
             cases.innerHTML="Active Cases: " + covidinfos[i].activecases
             death.innerHTML= "Covid Deaths: " + covidinfos[i].deaths
-            GDPs.innerHTML="GDP: "+covidinfos[i].GDP
-            pop.innerHTML="Population: "+covidinfos[i].population
+            GDPs.innerHTML="GDP: "+ covidinfos[i].GDP
+            pop.innerHTML="Population: "+ covidinfos[i].population
         }
     }
 }
