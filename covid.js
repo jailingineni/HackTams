@@ -7,8 +7,8 @@ class CovidInfo{
         this.population = population;
     }
     }
-    
-    var covidinfos = [new CovidInfo('Austin', 6, 10, 1271624, 30032), 
+
+    var covidinfos = [new CovidInfo('Austin', 6, 10, 1271624, 30032),
                       new CovidInfo('Bexar', 54441, 1427, 97527759, 2003554),
                       new CovidInfo('Brazoria', 755, 188, 15588622, 374264),
                       new CovidInfo('Collin', 1445, 199, 599117532, 1034730),
@@ -23,7 +23,7 @@ class CovidInfo{
                       new CovidInfo('Trinity', 211, 8, 233490, 14651),
                       new CovidInfo('Willacy', 56, 58, 870911, 21358),
                       new CovidInfo('Zavala', 12, 19, 945577, 11840)];
-                      
+
 function sortArray(sortorder){
     switch(sortorder){
         case 'Active Case':
@@ -38,7 +38,7 @@ function sortArray(sortorder){
         case 'Population':
             covidinfos.sort((a, b)=> (a.population > b.population ? -1:1));
             break;
-        default: 
+        default:
         covidinfos.sort((a, b)=> (a.counties > b.counties ? -1:1));
         break;
     }

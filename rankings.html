@@ -1,6 +1,6 @@
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="index.css"> 
+        <link rel="stylesheet" type="text/css" href="index.css">
         <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 <link rel="stylesheet" type="text/css" href="rankingsbyPopulations.css">
@@ -9,9 +9,9 @@
 </head>
 <body>
     <script>var action = getParameterByName('action', url = window.location.href)</script>
-    <script> 
+    <script>
         switch(action){
-        case 'Active Covid Cases': 
+        case 'Active Covid Cases':
         sortArray('Active Case');
         break;
         case 'Covid Deaths':
@@ -27,46 +27,43 @@
     }
    </script>
     <div id="centered-text" class="ui text container">
-        <h1> Rankings By <script>document.write(action);</script></h1>
-    <table border = 1 class = "center-table"> 
-            <script>for(var l = 0; l<covidinfos.length; l++){
-            document.write('<tr><td>'); 
-            document.write(l+1);
-            document.write('.</td> <td>');
-            document.write(covidinfos[l].counties);
-            document.write('</td> <td>');
-        switch(action){
-        case 'Active Covid Cases': 
-        document.write(covidinfos[l].activecases);
-        break;
-        case 'Covid Deaths':
-        document.write(covidinfos[l].deaths);
-            break;
-        case 'Real GDP':
-        document.write(covidinfos[l].GDP);
-            break;
-        case 'Population':
-        document.write(covidinfos[l].population);
-        break;
-        default :          
-          document.write(covidinfos[l].activecases);
-        break;
-                }
-            document.write('</td></tr>');
-            }</script>   
-
-
-</table>   
-<br>
-<button onclick="window.location.href='index.html';" class="ui button">
+<div class="ui raised card" id="center-block" style="width:300px">
+  <div class="content" >
+    <div class="header">Rankings By <script>document.write(action);</script></div>
+    <div class="description">
+      <script>
+      for(var l = 0; l<covidinfos.length; l++){
+          switch(action){
+            case 'Active Covid Cases':
+              document.write(`<div class='stats-row'><p>${(l+1)}.</p><p class='county-name'>${covidinfos[l].counties}<\p><p class='data-value'>${covidinfos[l].activecases}</p></div>`);
+              break;
+            case 'Covid Deaths':
+              document.write(`<div class='stats-row'><p>${(l+1)}.</p><p class='county-name'>${covidinfos[l].counties}<\p><p class='data-value'>${covidinfos[l].deaths}</p></div>`);
+              break;
+            case 'Real GDP':
+              document.write(`<div class='stats-row'><p>${(l+1)}.</p><p class='county-name'>${covidinfos[l].counties}<\p><p class='data-value'>${covidinfos[l].GDP}</p></div>`);
+              break;
+            case 'Population':
+              document.write(`<div class='stats-row'><p>${(l+1)}.</p><p class='county-name'>${covidinfos[l].counties}<\p><p class='data-value'>${covidinfos[l].population}</p></div>`);
+              break;
+            default :
+              document.write(`<div class='stats-row'><p>${(l+1)}.</p><p class='county-name'>${covidinfos[l].counties}<\p><p class='data-value'>${covidinfos[l].activecases}</p></div>`);
+              break;
+          }
+      }
+      </script>
+    </div>
+  </div>
+</div>
+<button onclick="window.location.href='index.html';" class="ui button" style="margin-bottom:1.5%">
     Home
   </button>
 
 </div>
 <div class = "align-link">
-                    <a href="https://www.texas-demographics.com/counties_by_population" target="_blank">Population Data</a> 
-                    <a href="https://dshs.texas.gov/coronavirus/AdditionalData.aspx" target="_blank">Texas County Covid Data</a> 
-                    <a href="https://www.bea.gov/data/gdp/gdp-county-metro-and-other-areas" target="_blank">GDP Data</a> 
+                    <a href="https://www.texas-demographics.com/counties_by_population" target="_blank">Population Data</a>
+                    <a href="https://dshs.texas.gov/coronavirus/AdditionalData.aspx" target="_blank">Texas County Covid Data</a>
+                    <a href="https://www.bea.gov/data/gdp/gdp-county-metro-and-other-areas" target="_blank">GDP Data</a>
                </div>
 </body>
 

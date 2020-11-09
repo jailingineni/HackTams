@@ -12,10 +12,32 @@
     display:flex;
     justify-content: space-between;
     width: 400px;
-    margin-left:auto;    
+    margin-left:auto;
     margin-right:auto;
+}
 
+.stats-row .data-value{
+  text-align: right;
+}
 
+#center-block{
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+}
+
+.stats-row{
+  display:flex;
+  justify-content: space-between;
+}
+
+.stats-row .county-name{
+  text-align: left;
+}
+
+.stats-row p{
+  width:100px;
 }
 
 .user-display{
@@ -28,10 +50,9 @@
     display:flex;
     justify-content: space-between;
     width: 400px;
-    margin-left:auto;    
+    margin-left:auto;
     margin-right:auto;
-    position: absolute;
-    bottom: 75px;
+    margin-bottom: 5%;
     left: 0px;
     right: 0px;
 }
